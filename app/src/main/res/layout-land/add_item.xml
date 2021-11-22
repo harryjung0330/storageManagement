@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_for_add">
+
+    <AutoCompleteTextView
+        android:id="@+id/type"
+        android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/type"
+        android:imeOptions="actionDone|flagNoExtractUi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></AutoCompleteTextView>
+
+    <AutoCompleteTextView
+        android:id="@+id/color"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:hint="@string/color"
+        android:imeOptions="actionDone|flagNoExtractUi"
+        app:layout_constraintEnd_toStartOf="@+id/size"
+        app:layout_constraintStart_toEndOf="@+id/type"
+        app:layout_constraintTop_toTopOf="@+id/type"></AutoCompleteTextView>
+
+    <AutoCompleteTextView
+        android:id="@+id/size"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginStart="50dp"
+        android:hint="@string/size"
+        android:imeOptions="actionDone|flagNoExtractUi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/color" />
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:hint="@string/amount"
+        android:imeOptions="actionDone|flagNoExtractUi"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/cost"
+        app:layout_constraintStart_toEndOf="@+id/size"
+        app:layout_constraintTop_toTopOf="@+id/size"></EditText>
+
+    <EditText
+        android:id="@+id/cost"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/cost"
+        android:imeOptions="actionDone|flagNoExtractUi"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/amount" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

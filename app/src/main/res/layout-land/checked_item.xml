@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <AutoCompleteTextView
+        android:id="@+id/type_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/type"
+        android:imeOptions="actionDone|flagNoExtractUi"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/color_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:hint="@string/color"
+        android:imeOptions="actionDone|flagNoExtractUi"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/type_check" />
+
+    <AutoCompleteTextView
+        android:id="@+id/size_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/size"
+        android:imeOptions="actionDone|flagNoExtractUi"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/amount_check"
+        app:layout_constraintStart_toEndOf="@+id/color_check"
+        app:layout_constraintTop_toTopOf="@+id/color_check" />
+
+    <TextView
+        android:id="@+id/amount_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:imeOptions="actionDone|flagNoExtractUi"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/size_check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/size_check"
+        tools:text="@string/amount" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
